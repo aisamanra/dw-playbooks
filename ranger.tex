@@ -1,0 +1,326 @@
+\documentclass[8pt]{extarticle}
+\input{assets/prelude}
+
+\pbClass{Ranger}
+\pbBaseHP{8}
+\pbDamage{8}
+
+\pbNames{Elf}{Throndir, Elrosine, Aranwe, Celion, Dambrath, Lanethe}
+\pbNames{Human}{Jonah, Halek, Brandon, Emory, Shrike, Nora, Diana}
+
+\pbLook{Wild Eyes, Sharp Eyes, or Animal Eyes}
+\pbLook{Hooded Head, Wild Hair, or Bald}
+\pbLook{Cape, Camouflage, or Traveling Clothes}
+\pbLook{Lithe Body, Wild Body, or Sharp Body}
+
+\begin{document}
+
+\charbanner
+
+\begin{minipage}[t]{3.2in}
+\leftbanner{Folk}
+
+\begin{optfeature}{Elf}
+  When you \move{Undertake a Perilous Journey} through wilderness,
+  whatever job you take you succeed as if you rolled a 10+.
+\end{optfeature}
+
+\begin{optfeature}{Human}
+  When you make camp in a dungeon or city, you don’t need to consume a
+  ration.
+\end{optfeature}
+
+\ 
+
+\leftbanner{Alignment}
+
+\begin{optfeature}{Chaotic}
+  Free someone from literal or figurative bonds.
+\end{optfeature}
+
+\begin{optfeature}{Good}
+  Endanger yourself to combat an unnatural threat.
+\end{optfeature}
+
+\begin{optfeature}{Neutral}
+  Help an animal or spirit of the wild.
+\end{optfeature}
+
+\ 
+
+\leftbanner{Bonds}
+
+\vfill\null
+\end{minipage}
+\begin{minipage}[t]{4.6in}
+
+
+\rightbanner{Starting Moves}
+
+\begin{basicmove}{Hunt and Track (CHA)}
+  When you \condition{follow a trail of clues left behind by passing
+    creatures}, roll +WIS. \onHit, you follow the creature's
+  trail until there's a significant change in its direction or mode of
+  travel. \onSuccess, you also choose 1:
+  \begin{itemize}
+  \item Gain a useful bit of information about your quarry, the GM
+    will tell you what
+  \item Determine what caused the trail to end
+  \end{itemize}
+\end{basicmove}
+\
+
+\begin{basicmove}{Called Shot}
+  When you \condition{attack a defenseless or surprised enemy at range},
+  you can choose to deal your damage or name your target and roll
+  +DEX.
+
+  \begin{description}
+  \item[Head] \onPartial, they do nothing but stand and drool for a
+    few moments. \onSuccess, as 7--9, plus your damage.
+  \item[Arms] \onPartial, they drop anything they're
+    holding. \onSuccess, as 7--9, plus your damage.
+  \item[Legs] \onPartial, they're hobbled and slow-moving. \onSuccess,
+    as 7--9, plus your damage.
+  \end{description}
+\end{basicmove}
+\
+
+\begin{basicmove}{Animal Companion}
+  You have a supernatural connection with a loyal animal. You can't
+  talk to it per se, but it always acts as you wish it to. Name your
+  animal companion and choose a species:
+
+  \begin{quote}
+    \textit{wolf, cougar, bear, eagle, dog, hawk, cat, owl, pigeon,
+      rat, mule}
+  \end{quote}
+
+  Choose a base:
+  \begin{choices}
+  \item Ferocity +1, Cunning +1, 1 Armor, Instinct +1
+  \item Ferocity +2, Cunning +2, 0 Armor, Instinct +1
+  \item Ferocity +1, Cunning +2, 1 Armor, Instinct +1
+  \item Ferocity +3, Cunning +1, 1 Armor, Instinct +2
+  \end{choices}
+
+  Choose as many strengths as its ferocity:
+
+  \begin{quote}
+    \textit{fast, burly, huge, calm, adaptable, quick reflexes,
+      tireless, camouflage, ferocious, intimidating, keen senses,
+      stealthy}
+  \end{quote}
+
+  Your animal companion is trained to fight humanoids. Choose as many
+  additional trainings as its cunning:
+
+  \begin{quote}
+    \textit{hunt, search, scout, guard, fight monsters, perform,
+      labor, travel}
+  \end{quote}
+
+  Choose as many weaknesses as its instinct:
+
+  \begin{quote}
+    \textit{flighty, savage, slow, broken, frightening, forgetful,
+      stubborn, lame}
+  \end{quote}
+\end{basicmove}
+\
+
+\begin{basicmove}{Command}
+  When you \condition{work with your animal companion on something
+    it's trained in}:
+
+  \begin{itemize}
+  \item ...and you attack the same target, add its ferocity to your damage
+  \item ...and you track, add its cunning to your roll
+  \item ...and you take damage, add its armor to your armor
+  \item ...and you discern realities, add its cunning to your roll
+  \item ...and you parley, add its cunning to your roll
+  \item ...and someone interferes with you, add its instinct to their roll
+  \end{itemize}
+\end{basicmove}
+
+
+\vfill\null
+\end{minipage}
+\charlower
+\clearpage
+
+\gearbanner
+
+\begin{multicols}{2}
+
+  \begin{quote}
+
+    \yourLoad{11}. You start with dungeon rations (\uses{5},
+    \weight{1}), leather armor (\armor{1}, \weight{1}), and a bundle of
+    arrows (\ammo{3}, \weight{1}). Choose your armament:
+
+    \begin{choices}
+    \item Hunter’s bow (\itag{near}, \itag{far}, \weight{1}) and short
+      sword (\itag{close}, \weight{1})
+    \item Hunter’s bow (\itag{near}, \itag{far}, \weight{1}) and spear
+      (\itag{reach}, \weight{1})
+    \end{choices}
+
+    Choose one:
+    \begin{choices}
+    \item Adventuring gear (\weight{1}) and dungeon rations (\weight{1})
+    \item Adventuring gear (\weight{1}) and bundle of arrows
+      (\ammo{3}, \weight{1})
+    \end{choices}
+
+
+  \end{quote}
+
+\ 
+
+\columnbreak
+
+\
+
+\end{multicols}
+
+\widebanner{Advanced Moves}
+
+\begin{multicols}{2}
+  $\triangleright$ \textbf{You may take this feature only if it is
+    your first advancement}.
+
+  \begin{optfeature}{Half-Elven}
+    Somewhere in your lineage lies mixed blood and it begins to show
+    its presence. You gain the elf starting move if you took the human
+    one at character creation, or vice versa.
+  \end{optfeature}
+
+  \
+
+  \firstAdvances
+
+\begin{amove}{Wild Empathy}
+  You can speak with and understand animals.
+\end{amove}
+
+\begin{amove}{Familiar Prey}
+  When you \move{Spout Lore} about a monster, you use WIS instead of
+  INT.
+\end{amove}
+
+\begin{amove}{Viper’s Strike}
+  When you \condition{strike an enemy with two weapons at once}, add
+  an extra 1d4 damage for your off-hand strike.
+\end{amove}
+
+\begin{amove}{Camouflage}
+  When you \condition{keep still in natural surroundings}, enemies
+  never spot you until you make a movement.
+\end{amove}
+
+\begin{amove}{Man’s Best Friend}
+  When you \condition{allow your animal companion to take a blow that
+    was meant for you}, the damage is negated and your animal
+  companion’s ferocity becomes 0. If its ferocity is already 0 you
+  can’t use this ability. When you have a few hours of rest with your
+  animal companion its ferocity returns to normal.
+\end{amove}
+
+\begin{amove}{Blot Out the Sun}
+  When you \move{Volley} you may spend extra ammo before rolling. For
+  each point of ammo spent you may choose an extra target. Roll once
+  and apply damage to all targets.
+\end{amove}
+
+\begin{amove}{Well-Trained}
+  Choose another training for your animal companion.
+\end{amove}
+
+\begin{amove}{God Amidst the Wastes}
+  Dedicate yourself to a deity (name a new one or choose one that’s
+  already been established). You gain the \move{Commune} and
+  \move{Cast a Spell} Cleric moves. When you select this move, treat
+  yourself as a Cleric of level 1 for using spells. Every time you
+  gain a level thereafter, increase your effective Cleric level by 1.
+\end{amove}
+
+\begin{amove}{Follow Me}
+  When you \move{Undertake a Perilous Journey} you can take two
+  roles. You make a separate roll for each.
+\end{amove}
+
+\begin{amove}{A Safe Place}
+  When you \condition{set the watch for the night}, everyone takes +1
+  to \move{Take Watch}.
+\end{amove}
+
+
+\vfill\null
+\columnbreak
+
+\secondAdvances
+
+\begin{amove}{Wild Speech}
+\moveReplaces{Wild Empathy}
+
+  You can speak with and understand any non-magical, non-planar
+  creature.
+\end{amove}
+
+\begin{amove}{Hunter’s Prey}
+\moveReplaces{Familiar Prey}
+
+  When you \move{Spout Lore} about a monster you use WIS instead of
+  INT. \onMassiveSuccess, in addition to the normal effects, you get
+  to ask the GM any one question about the subject.
+\end{amove}
+
+\begin{amove}{Viper’s Fangs}
+\moveReplaces{Viper’s Strike}
+
+  When you \condition{strike an enemy with two weapons at once}, add
+  an extra 1d8 damage for your off-hand strike.
+\end{amove}
+
+\begin{amove}{Smaug’s Belly}
+  When you know your target’s weakest point your arrows have
+  \ntag{2}{piercing}.
+\end{amove}
+
+\begin{amove}{Strider}
+\moveReplaces{Follow Me}
+
+When you \move{Undertake a Perilous Journey} you can take two
+roles. Roll twice and use the better result for both roles.
+\end{amove}
+
+\begin{amove}{A Safer Place}
+\moveReplaces{A Safe Place}
+
+  When you \condition{set the watch for the night} everyone takes +1
+  to take watch. After a night in camp when you set the watch everyone
+  takes \forward{+1}.
+\end{amove}
+
+\begin{amove}{Observant}
+  When you \move{Hunt and Track}, on a hit you may also ask one
+  question about the creature you are tracking from the \move{Discern
+    Realities} list for free.
+\end{amove}
+
+\begin{amove}{Special Trick}
+  Choose a move from another class. So long as you are working with
+  your animal companion you have access to that move.
+\end{amove}
+
+\begin{amove}{Unnatural Ally}
+  Your animal companion is a monster, not an animal. Describe it. Give
+  it +2 ferocity and +1 instinct, plus a new training.
+\end{amove}
+
+
+\vfill\null
+\end{multicols}
+
+\end{document}

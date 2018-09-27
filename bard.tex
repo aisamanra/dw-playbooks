@@ -1,0 +1,336 @@
+\documentclass[8pt]{extarticle}
+
+\input{assets/prelude.tex}
+
+\pbClass{Bard}
+\pbBaseHP{6}
+\pbDamage{6}
+
+\pbNames{Elf}{Astrafel, Daelwyn, Feliana, Damarra, Sistranalle,
+  Pendrell, Melliandre, Dagoliir}
+
+\pbNames{Human}{Baldric, Leena, Dunwick, Willem, Edwyn, Florian,
+  Seraphine, Quorra, Charlotte, Lily, Ramonde, Cassandra}
+
+\pbNames{Rihamm}{Albis, Quren, Ulduqan, Ebresa, Yudrus, Depremm,
+  Rubuqin, Umas, Elqorim}
+
+\pbLook{Knowing Eyes, Fiery Eyes, or Joyous Eyes}
+\pbLook{Fancy Hair, Wild Hair, or Stylish Cap}
+\pbLook{Finery, Traveling Clothes, or Poor Clothes}
+\pbLook{Fit Body, Well-fed Body, or Thin Body}
+
+
+\begin{document}
+
+\charbanner
+
+\begin{minipage}[t]{3.2in}
+  \leftbanner{Folk}
+
+
+\begin{optfeature}{Elf}
+  When you enter an important location (your call) you can ask the GM
+  for one fact from the history of that location.
+\end{optfeature}
+
+\begin{optfeature}{Human}
+  When you first enter a civilized settlement someone who respects the
+  custom of hospitality to minstrels will take you in as their guest.
+\end{optfeature}
+
+\begin{optfeature}{Rihamm}
+  When you use \move{Charming and Friendly} with someone, ask them two
+  questions instead of one.
+\end{optfeature}
+
+\leftbanner{Alignment}
+
+\begin{optfeature}{Good}
+  Perform your art to aid someone else.
+\end{optfeature}
+
+\begin{optfeature}{Neutral}
+  Avoid a conflict or defuse a tense situation.
+\end{optfeature}
+
+\begin{optfeature}{Chaotic}
+  Spur others to significant and unplanned decisive action.
+\end{optfeature}
+
+\leftbanner{Bonds}
+\vfill\null
+
+\end{minipage}
+\begin{minipage}[t]{4.6in}
+
+\rightbanner{Starting Moves}
+
+\begin{basicmove}{Arcane Art}
+  When you \condition{weave a performance into a basic spell}, choose
+  an ally and an effect:
+
+  \begin{itemize}
+  \item Heal 1d8 damage
+  \item \forward{+1d4} to damage
+  \item Their mind is shaken clear of one enchantment
+  \item The next time someone successfully assists the target with
+    aid, they get +2 instead of +1
+  \end{itemize}
+
+  Then roll +CHA. \onSuccess, the ally gets the selected
+  effect. \onPartial, your spell still works, but you draw unwanted
+  attention or your magic reverberates to other targets affecting them
+  as well, GM’s choice.
+\end{basicmove}
+\
+
+\begin{basicmove}{Bardic Lore}
+  Choose an area of expertise:
+
+  \begin{choices}
+  \item Spells and Magicks
+  \item The Dead and Undead
+  \item Grand Histories of the Known World
+  \item A Bestiary of Creatures Unusual
+  \item The Planar Spheres
+  \item Legends of Heroes Past
+  \item Gods and Their Servants
+  \end{choices}
+
+  When you \condition{first encounter an important creature, location,
+    or item (your call) covered by your bardic lore} you can ask the
+  GM any one question about it; the GM will answer truthfully. The GM
+  may then ask you what tale, song, or legend you heard that
+  information in.
+\end{basicmove}
+\
+
+\begin{basicmove}{Charming and Open}
+  When you \condition{speak frankly with someone}, you can ask their
+  player a question from the list below. They must answer it
+  truthfully, then they may ask you a question from the list (which
+  you must answer truthfully).
+
+  \begin{itemize}
+  \item Whom do you serve?
+  \item What do you wish I would do?
+  \item How can I get you to \blank?
+  \item What are you really feeling right now?
+  \item What do you most desire?
+  \end{itemize}
+
+\end{basicmove}
+\
+
+\begin{basicmove}{A Port in the Storm}
+    When you \condition{arrive at a civilized settlement spoken of in
+      lore or song}, tell the GM something you've heard about the
+    place. They’ll tell you how it’s changed since the Shattering.
+\end{basicmove}
+
+
+\vfill\null
+\end{minipage}
+
+\charlower
+\clearpage
+
+\gearbanner
+
+\begin{multicols}{2}
+
+\begin{quote}
+  \yourLoad{9}. You have dungeon rations (\ntag{5}{uses},
+  \ntag{1}{weight}). Choose one instrument, all are \ntag{0}{weight}
+  for you:
+
+  \begin{choices}
+  \item Your father’s mandolin, repaired
+  \item A fine lute, a gift from a noble
+  \item The pipes with which you courted your first love
+  \item A stolen horn
+  \item A fiddle, never before played
+  \item A songbook in a forgotten tongue
+  \end{choices}
+
+\end{quote}
+\vfill\null
+
+\ 
+
+\columnbreak
+\begin{quote}
+  Choose your clothing:
+
+  \begin{choices}
+  \item Leather armor (\armor{1}, \weight{1})
+  \item Ostentatious clothes (\weight{0})
+  \end{choices}
+
+  Choose your armament:
+
+  \begin{choices}
+  \item Dueling rapier (\itag{close}, \itag{precise}, \ntag{2}{weight})
+  \item Worn bow (\itag{near}, \ntag{2}{weight}), bundle of arrows
+    (\ntag{3}{ammo}, \itag{1 weight}), and short sword (\itag{close},
+    \ntag{1}{weight})
+  \end{choices}
+
+  Choose one:
+
+  \begin{choices}
+  \item Adventuring gear (\ntag{1}{weight})
+  \item Bandages (\ntag{0}{weight})
+  \item Halfling pipeleaf (\ntag{0}{weight})
+  \item 3 coins
+  \end{choices}
+
+\end{quote}
+
+\end{multicols}
+
+\widebanner{Advanced Moves}
+
+\begin{multicols}{2}
+\firstAdvances
+
+\begin{amove}{Healing Song}
+  When you \condition{heal with \move{Arcane Art}}, you heal +1d8
+  damage.
+\end{amove}
+
+\begin{amove}{Vicious Cacophony}
+  When you \condition{grant bonus damage with \move{Arcane Art}}, you
+  grant an extra +1d4 damage.
+\end{amove}
+
+\begin{amove}{It Goes To Eleven}
+  When you \condition{unleash a crazed performance} (a righteous lute
+  solo or mighty brass blast, maybe) choose a target who can hear you
+  and roll +CHA. \onSuccess, the target attacks their nearest ally in
+  range. \onPartial, they attack their nearest ally, but you also draw
+  their attention and ire.
+\end{amove}
+
+
+\begin{amove}{Metal Hurlant}
+  When you \condition{shout with great force or play a shattering
+    note} choose a target and roll +CON. \onSuccess, the target takes
+  1d10 damage and is deafened for a few minutes. \onPartial, you still
+  damage your target, but it’s out of control: the GM will choose an
+  additional target nearby.
+\end{amove}
+
+
+\begin{amove}{A Little Help From My Friends}
+  When you \condition{successfully aid someone} you take \forward{+1} as
+  well.
+\end{amove}
+
+
+\begin{amove}{Eldritch Tones}
+  Your \move{Arcane Art} is strong, allowing you to choose two effects
+  instead of one.
+\end{amove}
+
+
+\begin{amove}{Duelist’s Parry}
+  When you \move{Hack and Slash}, you take \armorForward{+1}.
+\end{amove}
+
+\begin{amove}{Bamboozle}
+  \onPartialFor{Parley}, you also take \forward{+1} with them.
+\end{amove}
+
+
+\begin{amove}{Multiclass Dabbler}
+  Get one move from another class. Treat your level as one lower for
+  choosing the move.
+\end{amove}
+
+
+\begin{amove}{Multiclass Initiate}
+  Get one move from another class. Treat your level as one lower for
+  choosing the move.
+\end{amove}
+
+\vfill\null
+\columnbreak
+
+\secondAdvances
+
+\begin{amove}{Healing Chorus}
+\moveReplaces{Healing Song}
+
+  When you \condition{heal with \move{Arcane Art}}, you heal +2d8 damage.
+\end{amove}
+
+
+\begin{amove}{Vicious Blast}
+\moveReplaces{Vicious Cacophony}
+
+  When you \condition{grant bonus damage with \move{Arcane Art}}, you
+  grant an extra +2d4 damage.
+\end{amove}
+
+
+\begin{amove}{Unforgettable Face}
+  When you \condition{meet someone you’ve met before} (your call)
+  after some time apart you take \forward{+1} against them.
+\end{amove}
+
+
+\begin{amove}{Reputation}
+  When you \condition{first meet someone who’s heard songs about you},
+  roll +CHA. \onSuccess, tell the GM two things they’ve heard about
+  you. \onPartial, tell the GM one thing they’ve heard, and the GM
+  tells you one thing.
+\end{amove}
+
+
+\begin{amove}{Eldritch Chord}
+\moveReplaces{Eldritch Tones}
+
+  When you use \move{Arcane Art}, you choose two effects. You also get to
+  choose one of those effects to double.
+\end{amove}
+
+
+\begin{amove}{An Ear For Magic}
+  When you \condition{hear an enemy cast a spell} the GM will tell you
+  the name of the spell and its effects. Take \forward{+1} when acting
+  on the answers.
+\end{amove}
+
+
+\begin{amove}{Devious}
+  When you use \move{Charming and Open} you may also ask “How are you
+  vulnerable to me?” Your subject may not ask this question of you.
+\end{amove}
+
+
+\begin{amove}{Duelist’s Block}
+\moveReplaces{Duelist’s Parry}
+
+  When you \move{Hack and Slash}, you take \armorForward{+2}.
+\end{amove}
+
+
+\begin{amove}{Con}
+  \moveReplaces{Bamboozle}
+
+  \onPartialFor{Parley}, you also take \forward{+1} with them and get
+  to ask their player one question which they must answer truthfully.
+\end{amove}
+
+
+\begin{amove}{Multiclass Master}
+  Get one move from another class. Treat your level as one lower for
+  choosing the move.
+\end{amove}
+
+\vfill\null
+\end{multicols}
+
+\end{document}

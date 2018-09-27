@@ -1,0 +1,293 @@
+\documentclass[8pt]{extarticle}
+\input{assets/prelude}
+
+% Modify this commands to define Class name, Base HP, Base Load and Damage Dice (only number)
+\pbClass{Paladin}
+\pbBaseHP{10}
+\pbDamage{10}
+
+\pbNames{Human}{Thaddeus, Augustine, Lux, Cassius, Hadrian, Lucia,
+  Octavia, Regulus, Valeria, Sanguinus, Titanius}
+
+\pbLook{Kind Eyes, Fiery Eyes, or Glowing Eyes}
+\pbLook{Helmet, Styled Hair, or Bald}
+\pbLook{Worn Holy Symbol or Fancy Holy Symbol}
+\pbLook{Fit Body, Bulky Body, or Thin Body}
+
+\begin{document}
+
+\charbanner
+
+\begin{minipage}[t]{3.2in}
+\leftbanner{Folk}
+
+\begin{optfeature}{Human}
+  When you \condition{pray for guidance, even for a moment, and ask,
+    ``What here is evil?''} the GM will tell you, honestly.
+\end{optfeature}
+
+\ 
+
+\leftbanner{Alignment}
+
+\begin{optfeature}{Lawful}
+  Deny mercy to a criminal or unbeliever.
+\end{optfeature}
+
+\begin{optfeature}{Good}
+  Endanger yourself to protect someone weaker than you.
+\end{optfeature}
+
+\ 
+
+\leftbanner{Bonds}
+
+\vfill\null
+\end{minipage}
+\begin{minipage}[t]{4.6in}
+
+
+\rightbanner{Starting Moves}
+
+\begin{basicmove}{Lay on Hands (CHA)}
+  When you \condition{touch someone, skin to skin, and pray for their
+    well-being}, roll +CHA. \onSuccess, you heal 1d8 damage or remove
+  one disease. \onPartial, they are healed, but the damage or disease
+  is transferred to you.
+\end{basicmove}
+\
+
+\begin{basicmove}{Armored}
+  You ignore the \itag{clumsy} tag on armor you wear.
+\end{basicmove}
+\
+
+\begin{basicmove}{I Am the Law}
+  When you \condition{give an NPC an order based on your divine
+    authority}, roll +CHA. \onPartial, they choose one:
+
+  \begin{itemize}
+  \item Do what you say
+  \item Back away cautiously, then flee
+  \item Attack you
+  \end{itemize}
+
+  \onSuccess, you also take \forward{+1} against them. \onMiss, they
+  do as they please and you take \forward{-1} against them.
+\end{basicmove}
+\
+
+\begin{basicmove}{Quest}
+  When you \condition{dedicate yourself to a mission through prayer
+    and ritual cleansing}, state what you set out to do:
+
+  \begin{itemize}
+  \item Slay \blank, a great blight on the land
+  \item Defend \blank\ from the iniquities that beset them
+  \item Discover the truth of \blank
+  \end{itemize}
+
+  Then choose up to two boons:
+
+  \begin{itemize}
+  \item An unwavering sense of direction to \blank
+  \item Invulnerability to \blank\ (e.g., edged weapons, fire, enchantment, etc.)
+  \item A mark of divine authority
+  \item Senses that pierce lies
+  \item A voice that transcends language
+  \item A freedom from hunger, thirst, and sleep
+  \end{itemize}
+
+  The GM will then tell you what vow or vows is required of you to
+  maintain your blessing:
+
+  \begin{itemize}
+  \item Honor (forbidden: cowardly tactics and tricks)
+  \item Temperance (forbidden: gluttony in food, drink, and pleasure of the flesh)
+  \item Piety (required: observance of daily holy services)
+  \item Valor (forbidden: suffering an evil creature to live)
+  \item Truth (forbidden: lies)
+  \item Hospitality (required: comfort to those in need, no matter who they are)
+  \end{itemize}
+
+\end{basicmove}
+
+
+
+\vfill\null
+\end{minipage}
+\charlower
+\clearpage
+
+\gearbanner
+
+\begin{multicols}{2}
+
+  \begin{quote}
+    \yourLoad{12}. You start with dungeon rations
+    (\ntag{5}{uses}, \ntag{1}{weight}), scale armor (\ntag{2}{armor},
+    \ntag{3}{weight}), and some mark of faith, describe it
+    (\ntag{0}{weight}). Choose your weapon:
+
+    \begin{choices}
+    \item Halberd (\itag{reach}, \ntag{+1}{damage}, \itag{two-handed},
+      \ntag{2}{weight})
+    \item Long sword (\itag{close}, \ntag{+1}{damage},
+      \ntag{1}{weight}) and shield (\ntag{+1}{armor},
+      \ntag{2}{weight})
+    \end{choices}
+
+  Choose one:
+
+  \begin{choices}
+  \item Adventuring gear (\ntag{1}{weight})
+  \item Dungeon rations (\ntag{1}{weight}) and healing potion (\ntag{0}{weight})
+  \end{choices}
+
+\end{quote}
+
+\ 
+
+\columnbreak
+
+\ 
+
+\end{multicols}
+
+\widebanner{Advanced Moves}
+
+\begin{multicols}{2}
+
+\firstAdvances
+
+\begin{amove}{Divine Favor}
+  Dedicate yourself to a deity (name a new one or choose one that’s
+  already been established). You gain the \move{Commune} and
+  \move{Cast a Spell} Cleric moves. When you select this move, treat
+  yourself as a Cleric of level 1 for using spells. Every time you
+  gain a level thereafter, increase your effective cleric level by 1.
+\end{amove}
+
+\begin{amove}{Bloody Aegis}
+  When you \condition{take damage} you can grit your teeth and accept
+  the blow. If you do you take no damage but instead suffer a debility
+  of your choice. If you already have all six debilities you can’t use
+  this move.
+\end{amove}
+
+\begin{amove}{Smite}
+  While on a \move{Quest} you deal +1d4 damage.
+\end{amove}
+
+\begin{amove}{Exterminatus}
+  When you \condition{speak aloud your promise to defeat an enemy},
+  you deal +2d4 damage against that enemy and -4 damage against anyone
+  else. This effect lasts until the enemy is defeated. If you fail to
+  defeat the enemy or give up the fight, you can admit your failure,
+  but the effect continues until you find a way to redeem yourself.
+\end{amove}
+
+\begin{amove}{Charge!}
+  When you \condition{lead the charge into combat}, those you lead
+  take \forward{+1}.
+\end{amove}
+
+\begin{amove}{Staunch Defender}
+  When you \move{Defend} you always get +1 hold, even on a 6-.
+\end{amove}
+
+\begin{amove}{Setup Strike}
+  When you \move{Hack and Slash}, choose an ally. Their next attack
+  against your target does +1d4 damage.
+\end{amove}
+
+\begin{amove}{Holy Protection}
+  You get \ntag{+1}{armor} while on a \move{Quest}.
+\end{amove}
+
+\begin{amove}{Voice of Authority}
+  Take +1 to order hirelings.
+\end{amove}
+
+\begin{amove}{Hospitaller}
+  When you \condition{heal an ally}, you heal +1d8 damage.
+\end{amove}
+
+
+\vfill\null
+\columnbreak
+
+\secondAdvances
+
+\begin{amove}{Evidence of Faith}
+\moveRequires{Divine Favor}
+
+  When you \condition{see divine magic as it happens}, you can ask the
+  GM which deity granted the spell and its effects. Take +1 when
+  acting on the answers.
+\end{amove}
+
+\begin{amove}{Holy Smite}
+\moveReplaces{Smite}
+
+  While on a \move{Quest} you deal +1d8 damage.
+\end{amove}
+
+\begin{amove}{Ever Onward}
+  \moveReplaces{Charge!}
+
+  When you \condition{lead the charge into combat}, those you lead
+  take \forward{+1} and \armorForward{+2}.
+\end{amove}
+
+\begin{amove}{Impervious Defender}
+  \moveReplaces{Staunch Defender}
+
+  When you \move{Defend} you always get +1 hold, even on a
+  6-. \onMassiveSuccessFor{Defend}, instead of getting hold the
+  nearest attacking creature is stymied giving you a clear advantage,
+  the GM will describe it.
+\end{amove}
+
+\begin{amove}{Tandem Strike}
+  \moveReplaces{Setup Strike}
+
+  When you \move{Hack and Slash}, choose an ally. Their next attack
+  against your target does \damage{+1d4} and they take \forward{+1}
+  against them.
+\end{amove}
+
+\begin{amove}{Divine Protection}
+  \moveReplaces{Holy Protection}
+
+  You get \ntag{+2}{armor} while on a \move{Quest}.
+\end{amove}
+
+\begin{amove}{Divine Authority}
+  \moveReplaces{Voice of Authority}
+
+  Take +1 to order hirelings. \onMassiveSuccess, the hireling
+  transcends their moment of fear and doubt and carries out your order
+  with particular effectiveness or efficiency.
+\end{amove}
+
+\begin{amove}{Perfect Hospitaller}
+  \moveReplaces{Hospitaller}
+
+  When you \condition{heal an ally}, you heal \damage{+2d8}.
+\end{amove}
+
+\begin{amove}{Indomitable}
+  When you suffer a debility (even through \move{Bloody Aegis}) take
+  \forward{+1} against whatever caused it.
+\end{amove}
+
+\begin{amove}{Perfect Knight}
+  When you \move{Quest} you choose three boons instead of two.
+\end{amove}
+
+
+\vfill\null
+\end{multicols}
+
+\end{document}

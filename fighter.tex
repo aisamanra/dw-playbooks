@@ -1,0 +1,328 @@
+\documentclass[8pt]{extarticle}
+\input{assets/prelude}
+
+% Modify this commands to define Class name, Base HP, Base Load and Damage Dice (only number)
+\pbClass{Fighter}
+\pbBaseHP{10}
+\pbDamage{10}
+
+\pbNames{Dwarf}{Ozruk, Surtur, Brunhilda, Annika, Janos, Greta, Dim,
+  Rundrig, Jarl, Xotoq}
+
+\pbNames{Elf}{Elohiir, Sharaseth, Hasrith, Shevaral, Cadeus, Eldar,
+  Kithracet, Thelian}
+
+\pbNames{Halfling}{Finnegan, Olive, Randolph, Bartleby, Aubrey,
+  Baldwin, Becca}
+
+\pbNames{Human}{Hawke, Rudiger, Gregor, Brianne, Walton, Castor,
+  Shanna, Ajax, Hob}
+
+\pbLook{Hard Eyes, Dead Eyes, or Eager Eyes}
+\pbLook{Wild Hair, Shorn Hair, or Battered Helm}
+\pbLook{Calloused Skin, Tanned Skin, or Scarred Skin}
+\pbLook{Built Body, Lithe Body, or Ravaged Body}
+
+\begin{document}
+
+\charbanner
+
+\begin{minipage}[t]{3.2in}
+\leftbanner{Folk}
+
+\begin{optfeature}{Dwarf}
+  When you \textbf{share a drink with someone}, you may \move{Parley}
+  with them using CON instead of CHA.
+\end{optfeature}
+
+\begin{optfeature}{Elf}
+  Choose one weapon—you can always treat weapons of that type as if
+  they had the \itag{precise} tag.
+\end{optfeature}
+
+\begin{optfeature}{Halfling}
+  When you \move{Defy Danger} and \textbf{use your small size to your
+    advantage}, take +1.
+\end{optfeature}
+
+\begin{optfeature}{Human}
+  Once per battle you may reroll a single damage roll (yours or
+  someone else’s).
+\end{optfeature}
+
+\ 
+
+\leftbanner{Alignment}
+
+\begin{optfeature}{Good}
+  Defend those weaker than you.
+\end{optfeature}
+
+\begin{optfeature}{Neutral}
+  Defeat a worthy opponent.
+\end{optfeature}
+
+\begin{optfeature}{Evil}
+  Kill a defenseless or surrendered enemy.
+\end{optfeature}
+
+
+\ 
+
+\leftbanner{Bonds}
+
+\vfill\null
+\end{minipage}
+\begin{minipage}[t]{4.6in}
+
+\rightbanner{Starting Moves}
+
+\begin{basicmove}{Bend Bars, Lift Gates}
+  When you \condition{use pure strength to destroy an inanimate obstacle},
+  roll +STR. \onSuccess, choose 3. \onPartial, choose 2.
+
+  \begin{itemize}
+  \item It doesn’t take a very long time
+  \item Nothing of value is damaged
+  \item It doesn’t make an inordinate amount of noise
+  \item You can fix the thing again without a lot of effort
+  \end{itemize}
+\end{basicmove}
+\
+
+\begin{basicmove}{Armored}
+  You ignore the \itag{clumsy} tag on armor you wear.
+\end{basicmove}
+\
+
+
+\begin{basicmove}{Signature Weapon}
+  This is your weapon. There are many like it, but this one is
+  yours. Your weapon is your best friend. It is your life. You master
+  it as you master your life. Your weapon, without you, is
+  useless. Without your weapon, you are useless. You must wield your
+  weapon true.
+
+  Choose a base description, all are 2 weight:
+
+  \begin{choices}
+  \item Sword
+  \item Axe
+  \item Hammer
+  \item Spear
+  \item Flail
+  \item Fists
+  \end{choices}
+
+  Choose the range that best fits your weapon:
+
+  \begin{choices}
+  \item \itag{hand}
+  \item \itag{close}
+  \item \itag{reach}
+  \end{choices}
+
+  Choose two enhancements:
+
+  \begin{choices}
+  \item Hooks and spikes. \ntag{+1}{damage}, but \ntag{+1}{weight}.
+  \item Sharp. \ntag{+2}{piercing}.
+  \item Perfectly weighted. Add \itag{precise}.
+  \item Serrated edges. \ntag{+1}{damage}.
+  \item Glows in the presence of one type of creature, your choice.
+  \item Huge. Add \itag{messy} and \itag{forceful}.
+  \item Versatile. Choose an additional range.
+  \item Well-crafted. \ntag{-1}{weight}.
+  \end{choices}
+
+
+  Choose a look:
+
+  \begin{choices}
+  \item Ancient
+  \item Unblemished
+  \item Ornate
+  \item Blood-stained
+  \item Sinister
+  \end{choices}
+
+\end{basicmove}
+
+\vfill\null
+\end{minipage}
+
+\charlower
+\clearpage
+
+\gearbanner
+
+\begin{multicols}{2}
+
+  \begin{quote}
+
+    \yourLoad{12}. You carry your signature weapon and dungeon rations
+    (\ntag{5}{uses}, \ntag{1}{weight}). Choose your defenses:
+
+    \begin{choices}
+    \item Chainmail (\ntag{1}{armor}, \ntag{1}{weight}) and
+      adventuring gear (\ntag{1}{weight})
+    \item Scale armor (\ntag{2}{armor}, \ntag{3}{weight})
+    \end{choices}
+
+    Choose two:
+
+    \begin{choices}
+    \item 2 Healing potions (\ntag{0}{weight})
+    \item Shield (\ntag{+1}{armor}, \ntag{2}{weight})
+    \item Antitoxin (\ntag{0}{weight}), dungeon rations
+      (\ntag{1}{weight}), and poultices and herbs (\ntag{1}{weight})
+    \item 22 coins
+    \end{choices}
+
+\end{quote}
+
+\ 
+
+\columnbreak
+
+\ 
+
+\end{multicols}
+
+\widebanner{Advanced Moves}
+
+\begin{multicols}{2}
+\firstAdvances
+
+\begin{amove}{Merciless}
+  When you deal damage, deal \damage{+1d4}.
+\end{amove}
+
+\begin{amove}{Heirloom}
+  When you \condition{consult the spirits that reside within your
+    signature weapon}, they will give you an insight relating to the
+  current situation, and might ask you some questions in return,
+  roll +CHA. \onSuccess, the GM will give you good detail. \onPartial,
+  the GM will give you an impression.
+\end{amove}
+
+\begin{amove}{Armor Mastery}
+  When you \condition{make your armor take the brunt of damage dealt
+    to you}, the damage is negated but you must reduce the armor value
+  of your armor or shield (your choice) by 1. The value is reduced
+  each time you make this choice. If the reduction leaves the item
+  with 0 armor it is destroyed.
+\end{amove}
+
+\begin{amove}{Improved Weapon}
+  Choose one extra enhancement for your signature weapon.
+\end{amove}
+
+\begin{amove}{Seeing Red}
+  When you \move{Discern Realities} during combat, you take +1.
+\end{amove}
+
+\begin{amove}{Interrogator}
+  When you \move{Parley} using threats of impending violence as
+  leverage, you may use STR instead of CHA.
+\end{amove}
+
+\begin{amove}{Scent of Blood}
+  When you \move{Hack and Slash} an enemy, your next attack against
+  that same foe deals \damage{1d4}.
+\end{amove}
+
+\begin{amove}{Multiclass Dabbler}
+  Get one move from another class. Treat your level as one lower for
+  choosing the move.
+\end{amove}
+
+\begin{amove}{Iron Hide}
+  You gain \armor{+1}.
+\end{amove}
+
+\begin{amove}{Blacksmith}
+  When you have access to a forge you can graft the magical powers of
+  a weapon onto your signature weapon. This process destroys the
+  magical weapon. Your signature weapon gains the magical powers of
+  the destroyed weapon.
+\end{amove}
+
+
+\vfill\null
+\columnbreak
+
+\secondAdvances
+
+\begin{amove}{Bloodthirsty}
+  \moveReplaces{Merciless}
+
+  When you deal damage, deal \damage{+1d8}.
+\end{amove}
+
+\begin{amove}{Armored Perfection}
+  \moveReplaces{Armor Mastery}
+
+  When you choose to let your armor take the brunt of damage dealt to
+  you, the damage is negated and you take \forward{+1} against the
+  attacker, but you must reduce the armor value of your armor or
+  shield (your choice) by 1. The value is reduced each time you make
+  this choice. If the reduction leaves the item with 0 armor it is
+  destroyed.
+\end{amove}
+
+\begin{amove}{Evil Eye}
+\moveRequires{Seeing Red}
+
+  When you \condition{enter combat}, roll +CHA. \onSuccess, hold
+  2. \onPartial, hold 1. Spend your hold to make eye contact with an
+  NPC present, who freezes or flinches and can’t act until you break
+  it off. \onMiss, your enemies immediately identify you as their
+  biggest threat.
+\end{amove}
+
+\begin{amove}{Taste of Blood}
+  \moveReplaces{Scent of Blood}
+
+  When you \move{Hack and Slash} an enemy, your next attack against
+  that same foe deals \damage{+1d8}.
+\end{amove}
+
+\begin{amove}{Multiclass Initiate}
+  \moveRequires{Multiclass Dabbler}
+
+  Get one move from another class. Treat your level as one lower for
+  choosing the move.
+\end{amove}
+
+\begin{amove}{Steel Hide}
+  \moveReplaces{Iron Hide}
+
+  You gain \armor{+2}.
+\end{amove}
+
+\begin{amove}{Through Death’s Eyes}
+  When you \condition{go into battle}, roll +WIS. \onSuccess, name
+  someone who will live and someone who will die. \onPartial, name
+  someone who will live or someone who will die. Name NPCs, not player
+  characters. The GM will make your vision come true, if it’s even
+  remotely possible. \onMiss, you see your own death and consequently
+  take \ongoing{-1} throughout the battle.
+\end{amove}
+
+\begin{amove}{Eye for Weaponry}
+  When you \condition{look over an enemy’s weaponry}, ask the GM how
+  much damage they do.
+\end{amove}
+
+\begin{amove}{Superior Warrior}
+  When you \move{Hack and Slash}, \onMassiveSuccess, you deal your
+  damage, avoid their attack, and impress, dismay, or frighten your
+  enemy.
+\end{amove}
+
+
+\vfill\null
+\end{multicols}
+
+\end{document}

@@ -1,0 +1,238 @@
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{anyfontsize}
+\usepackage[percent]{overpic}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{0.05cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec} % For loading fonts
+\usepackage{titlesec}
+
+\setmainfont{PT Serif}
+\newfontfamily\headingfont[]{Metamorphous}
+\titleformat*{\section}{\LARGE\headingfont}
+\titleformat*{\subsection}{\Large\headingfont}
+
+\newenvironment{amove}[1]
+{\Checkbox{6pt}\ {\color{MoveBlue}$\diamond$\headingfont #1}\begin{quote}
+}
+{\end{quote}
+}
+
+\newenvironment{optfeature}[2][]
+{\Checkbox{6pt}\ {\headingfont #2}\hfill\textit{#1}\phantom{asdf}\begin{quote}
+}
+{\end{quote}
+}
+
+\newenvironment{aspell}[2]
+{\Checkbox{6pt}\ {\headingfont\ \spell{#1}}\hfill\textit{#2}\phantom{asdf}\begin{quote}
+}
+{\end{quote}
+}
+
+\newenvironment{fragment}[1]
+{\begin{quote}{\headingfont #1}\begin{quote}
+}
+{\end{quote}\end{quote}
+}
+
+\newcommand{\subheader}[1]{\large\headingfont #1}
+
+\newenvironment{basicmove}[1]
+{\begin{quote}{\color{MoveBlue}$\diamond$\headingfont #1}\begin{quote}
+}
+{\end{quote}\end{quote}
+}
+
+\makeatletter
+
+\newcommand{\choicelabel}[1]{
+  {\hss\llap{\Checkbox{6pt}}}
+}
+\newcommand{\choicelabeldef}{
+  \@gobble{choicelabeldef}
+}
+
+\newenvironment{choices}
+{
+  \itemize
+  \let\makelabel\choicelabel
+  \let\@itemlabel\choicelabeldef
+}
+{\enditemize
+}
+\makeatother
+
+\newcommand{\choice}{\Checkbox{6pt} }
+
+\pagestyle{empty}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\setlength{\multicolsep}{6.0pt plus 2.0pt minus 1.5pt}% 50% of original values
+
+\date{}
+
+\usepackage{etoolbox}
+\patchcmd{\quote}{\rightmargin}{\leftmargin 1em \rightmargin}{}{}
+
+\usepackage{tikz}
+\newcommand{\Checkbox}[1]{\tikz{\path[draw=black] (0,0) rectangle (#1,#1);}}
+
+\newcommand{\pbClass}[1]{\newcommand{\Class}{#1}}
+\newcommand{\pbBaseHP}[1]{\newcommand{\BaseHP}{#1}}
+\newcommand{\pbDamage}[1]{\newcommand{\Damage}{#1}}
+\newcommand{\Look}{}
+\newcommand{\Names}{}
+\makeatletter
+\newcommand{\pbLook}[1]{\g@addto@macro\Look{\par#1}}
+\newcommand{\pbNames}[2]{\g@addto@macro\Names{\par\hangindent=0.2in#1: #2}}
+\makeatother
+
+\newcommand{\leftbanner}[1]{
+  \begin{overpic}[width=3.1in,height=0.45in]{assets/short_left.png}
+\put (2,4) {\fontsize{16}{40}\selectfont \textcolor{white}{\headingfont #1}}
+\end{overpic}
+}
+
+\newcommand{\rightbanner}[1]{
+  \begin{overpic}[width=4.4in,height=0.45in]{assets/long_right.png}
+\put (5,4) {\fontsize{16}{40}\selectfont \textcolor{white}{\headingfont #1}}
+\end{overpic}
+}
+
+\newcommand{\gearbanner}{
+\begin{overpic}[width=7.47986in,height=0.40945in]{assets/templateEquip.png}
+\put (3,2) {\fontsize{16}{40}\selectfont \textcolor{white}{\headingfont Gear}}
+\end{overpic}
+}
+
+\newcommand{\topbanner}[1]{
+  \begin{overpic}[width=7.47986in,height=1.0in]{assets/templateRuleHeader.png}
+  \put (1,2) {\fontsize{32}{40}\selectfont\headingfont \textcolor{white}{#1}}
+\end{overpic}
+}
+
+\newcommand{\widebanner}[1]{
+  \begin{overpic}[width=7.47986in,height=1.0in]{assets/templateThinHeader.png}
+  \put (1,1) {\fontsize{16}{40}\selectfont\headingfont \textcolor{white}{#1}}
+\end{overpic}
+}
+
+\newcommand{\charbanner}{
+  \begin{overpic}[width=8.008in,height=3.0in]{assets/charsheet_upper.png}
+  % names
+  \put(1, 30) {\parbox{4.3in}{\fontsize{12}{12}\Names}}
+  % look
+  \put(59, 30) {\parbox{3in}{\fontsize{12}{12}\Look}}
+
+  % some stats: damage...
+  \put (25,4) {\makebox[0pt]{\fontsize{18}{10}\selectfont\headingfont \textcolor{black}{D\Damage{}}}}
+  % max HP...
+  \put (89,6) {\fontsize{6}{8}\selectfont\headingfont \textcolor{white}{Your max HP is}}
+  % and Constitution
+  \put (89,4.6) {\fontsize{6}{8}\selectfont\headingfont \textcolor{white}{\BaseHP{} + Constitution}}
+\end{overpic}
+}
+
+\newcommand{\charlower}{
+  \vfill\null
+  \begin{overpic}[width=7.47986in,height=1.0in]{assets/charsheet_lower.png}
+  \put (10,1) {\fontsize{32}{40}\selectfont\headingfont \textcolor{white}{The \Class}}
+\end{overpic}
+}
+
+\definecolor{CondRed}{RGB}{153,51,51}
+\definecolor{MoveBlue}{RGB}{51,102,153}
+\definecolor{SpellPurp}{RGB}{153,51,102}
+\definecolor{TagGreen}{RGB}{51,153,102}
+
+\newcommand{\condition}[1]{\textbf{\color{CondRed} #1}}
+\newcommand{\move}[1]{{\color{MoveBlue}$\diamond$#1}}
+\newcommand{\spell}[1]{{\color{SpellPurp}$\star$#1}}
+\newcommand{\itag}[1]{\textit{\color{TagGreen}#1}}
+\newcommand{\ntag}[2]{\textit{\color{TagGreen}#1 #2}}
+
+% specific tags
+\newcommand{\weight}[1]{\ntag{#1}{weight}}
+\newcommand{\damage}[1]{\ntag{#1}{damage}}
+\newcommand{\armor}[1]{\ntag{#1}{armor}}
+\newcommand{\armorForward}[1]{\ntag{#1}{armor} forward}
+\newcommand{\uses}[1]{\ntag{#1}{uses}}
+\newcommand{\ammo}[1]{\ntag{#1}{ammo}}
+
+\newcommand{\hexes}[1]{\textit{#1 hexes}}
+\newcommand{\forward}[1]{#1 forward}
+\newcommand{\ongoing}[1]{#1 ongoing}
+\newcommand{\yourLoad}[1]{Your Load is \textbf{#1+STR}}
+
+\newcommand{\onSuccess}{\textbf{On a 10+}}
+\newcommand{\onPlainSuccess}{\textbf{On a 10--11}}
+\newcommand{\onMassiveSuccess}{\textbf{On a 12+}}
+\newcommand{\onPartial}{\textbf{On a 7--9}}
+\newcommand{\onHit}{\textbf{On a 7+}}
+\newcommand{\onMiss}{\textbf{On a miss}}
+
+\newcommand{\moveReplaces}[1]{\textbf{Replaces}: \move{#1}}
+\newcommand{\moveRequires}[1]{\textbf{Requires}: \move{#1}}
+\newcommand{\moveRequiresLst}[1]{\textbf{Requires}: #1}
+
+\newcommand{\onMassiveSuccessFor}[1]{%
+  When you use \move{#1} and \textbf{roll a 12+}}
+\newcommand{\onPlainSuccessFor}[1]{%
+  When you use \move{#1} and \textbf{roll a 10--11}}
+\newcommand{\onPartialFor}[1]{%
+  When you use \move{#1} and \textbf{roll a 7+}}
+
+\newcommand{\advancesigil}{$\triangleright$}
+\newcommand{\firstAdvances}{\advancesigil When you \textbf{gain a
+    level from 2--5}, choose from these moves.}
+\newcommand{\secondAdvances}{\advancesigil When you \textbf{gain a
+    level from 6--10}, choose from these moves or the level 2--5
+  moves.}
+
+\newcommand{\blank}{\underline{\phantom{mountain}}}
+\newcommand{\directive}[1]{\textbf{#1}}
+
+\openup -0.2em
