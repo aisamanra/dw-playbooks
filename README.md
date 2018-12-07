@@ -26,7 +26,7 @@ While there are a definite number of remaining formatting-related concerns, thes
   macros: `pbClass`, `pbBaseHP`, and `bpDamage` should be invoked with the playbook name, the base HP modifier, and the damage die, respectively. The `pbLook` and `pbNames` macros can be invoked more than once, and each invocation adds a new line to the _Look_ and _Names_ sections.
 - The aforementioned textual cues all have associated macros: `\condition{}` for a move trigger, `\move{}` for the name of a move, `\spell{}` for the name of a spell, `\itag{}` for a tag, and `\ntag{}{}` for a tag with an associated number.
 - Common tags have dedicated macros as well, including `\weight{}`, `\damage{}`, `\armor{}`, `\uses{}` and `\ammo{}`.
-- Macros are used for die roll results: `\onSuccess`, `\onPartial`, `\onHit`, and `\onMiss` are the most common. All of these begin with a capital letter, so they are intended to be used as the beginning of a setnence.
+- Macros are used for die roll results: `\onSuccess`, `\onPartial`, `\onHit`, and `\onMiss` are the most common. All of these begin with a capital letter, so they are intended to be used as the beginning of a sentence.
 - The `\moveReplaces{}` and `\moveRequires{}` macros are used in advanced moves to indicate which other moves they replace or require.
 - The `basicmove` and `amove` environments take an argument and produce a section with a header formatted as a move name. The `amove` environment has a checkbox to the left, for optional advanced moves.
 - The `optfeature` environment is like `amove` but without the move name coloring or sigil, and is used for things like alignment selection.
